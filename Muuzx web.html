@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUUZX ART</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Quicksand', sans-serif; }
+    body { background: #fffafc; color: #333; scroll-behavior: smooth; }
+    header, footer { text-align: center; padding: 2rem 1rem; }
+    header { background: #E0B0FF; animation: fadeIn 1s ease-in; }
+    header h1 { font-size: 2.5rem; color: #871F78; }
+    header p { font-size: 1.2rem; color: #6c4e5c; }
+
+    section { padding: 3rem 1rem; max-width: 1000px; margin: auto; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .gallery-grid img { width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .gallery-grid img:hover { transform: scale(1.03); }
+
+    .commission-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .commission-card { background: #f6f1f4; border-radius: 10px; padding: 1rem; text-align: center; }
+    .commission-card img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+    .commission-card h3 { color: #871F78; }
+    .commission-card p { font-size: 1rem; margin-top: 0.5rem; }
+
+    .about { text-align: center; }
+    .about img { border-radius: 50%; width: 120px; margin-bottom: 1rem; }
+    .socials a { margin: 0 0.5rem; color: #871F78; text-decoration: none; font-size: 1.5rem; }
+
+    .order-btn { background: #c4f2e6; color: #31736f; padding: 1rem 2rem; border: none; border-radius: 30px; cursor: pointer; font-size: 1.1rem; transition: background 0.3s; }
+    .order-btn:hover { background: #a0e4d1; }
+
+    .modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
+    .modal-content { background: #fff; padding: 2rem; border-radius: 10px; width: 90%; max-width: 500px; position: relative; }
+    .close-btn { position: absolute; top: 1rem; right: 1rem; cursor: pointer; }
+    form input, form select, form textarea { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border-radius: 8px; border: 1px solid #ccc; }
+
+    footer { background: #E0B0FF; font-size: 0.9rem; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .order-btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MUUZX ART</h1>
+    <p>Soft colors, strong emotions — commissions open!</p>
+  </header>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="img/art1.jpg" alt="Artwork 1">
+      <img src="img/art2.jpg" alt="Artwork 2">
+      <img src="img/art3.jpg" alt="Artwork 3">
+    </div>
+  </section>
+
+  <section id="commission">
+    <h2>Commission Info</h2>
+    <div class="commission-info">
+      <div class="commission-card">
+        <img src="gambar/bust.jpg" alt="Bust">
+        <h3>Bust - $25</h3>
+        <p>Head to shoulders illustration.</p>
+      </div>
+      <div class="commission-card">
+        <img src="gambar/halfbody.jpg" alt="Halfbody">
+        <h3>Halfbody - $40</h3>
+        <p>Upper body drawing with pose.</p>
+      </div>
+      <div class="commission-card">
+        <img src="gambar/fullbody.jpg" alt="Fullbody">
+        <h3>Fullbody - $60</h3>
+        <p>Complete full body in your chosen style.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <h2>Order Form</h2>
+    <button class="order-btn" onclick="document.querySelector('.modal').style.display='flex'">Open Order Form</button>
+  </section>
+
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="document.querySelector('.modal').style.display='none'">&times;</span>
+      <<form action="https://formbold.com/s/3pOXJ" method="POST">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <select name="type">
+    <option value="Bust">Bust</option>
+    <option value="Halfbody">Halfbody</option>
+    <option value="Fullbody">Fullbody</option>
+    <option value="Chibi">Chibi</option>
+  </select>
+  <input type="url" name="reference" placeholder="Reference Link or Image URL">
+  <textarea name="description" placeholder="Commission Details" rows="4" required></textarea>
+  <textarea name="notes" placeholder="Additional Notes (optional)" rows="2"></textarea>
+  <button class="order-btn" type="submit">Send Order</button>
+</form>
+
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="img/artist.jpg" alt="Artist Portrait">
+    <p>Hai! Aku muuzx, seorang digital artist yang suka bikin ilustrasi karakter penuh warna dan ekspresi. Sejak 2020, aku sudah mengerjakan berbagai commission mulai dari fanart, OC, sampai chibi art. Gayaku cenderung semi-realistic/anime/cartoon, tapi aku juga senang eksplorasi hal baru!<br><br>
+    Aku percaya tiap karakter punya cerita, dan tugasku adalah mewujudkannya jadi visual yang hidup. Kalau kamu tertarik buat pesan ilustrasi, langsung aja cek info commission-ku ya!</p>
+    <div class="socials">
+      <a href="#">🎨</a>
+      <a href="#">📸</a>
+      <a href="#">🎨</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MUUZX ART. <a href="tos.html">ToS</a> | <a href="contact.html">Contact</a> | <a href="faq.html">FAQ</a></p>
+  </footer>
+
+  <script>
+    window.onclick = function(event) {
+      const modal = document.querySelector('.modal');
+      if (event.target === modal) modal.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

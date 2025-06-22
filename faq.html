@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - MUUZX ART</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Quicksand', sans-serif; }
+    body { background: #fffafc; color: #333; line-height: 1.6; }
+    header, footer { text-align: center; padding: 2rem 1rem; }
+    header { background: #E0B0FF; }
+    header h1 { font-size: 2.5rem; color: #871F78; }
+    .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h2 { color: #871F78; margin-bottom: 1.5rem; text-align: center; }
+    .faq-item {
+      background: #f6f1f4;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .faq-item h3 { color: #871F78; margin-bottom: 0.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;}
+    .faq-item h3::after { content: '+'; font-size: 1.5rem; transition: transform 0.3s ease; }
+    .faq-item.active h3::after { content: '-'; transform: rotate(180deg); }
+    .faq-item .answer { display: none; padding-top: 1rem; border-top: 1px solid #eee; margin-top: 1rem; }
+    .faq-item.active .answer { display: block; }
+    p { margin-bottom: 0.5rem; }
+    a { color: #871F78; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { background: #E0B0FF; font-size: 0.9rem; margin-top: 3rem; }
+    footer p a { color: #871F78; text-decoration: none; }
+    footer p a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Frequently Asked Questions</h1>
+  </header>
+
+  <div class="container">
+    <h2>Pertanyaan Umum</h2>
+
+    <div class="faq-item">
+      <h3>Jenis seni apa yang Anda spesialisasikan?</h3>
+      <div class="answer">
+        <p>Saya berspesialisasi dalam seni digital, berfokus pada ilustrasi karakter dengan warna-warna cerah dan gaya ekspresif. Karya saya seringkali masuk dalam kategori semi-realistis, anime, atau kartun, tetapi saya selalu terbuka untuk menjelajahi estetika baru.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Bagaimana cara memesan komisi?</h3>
+      <div class="answer">
+        <p>Anda dapat memesan komisi dengan mengklik tombol "Open Order Form" di <a href="index.html#order">halaman utama</a>. Isi formulir dengan detail Anda, dan saya akan menghubungi Anda kembali untuk mendiskusikan proyek Anda.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Berapa waktu pengerjaan yang biasa Anda butuhkan?</h3>
+      <div class="answer">
+        <p>Waktu pengerjaan bervariasi tergantung pada kompleksitas komisi dan beban kerja saya saat ini. Saya akan memberikan perkiraan tanggal penyelesaian saat kita mendiskusikan proyek Anda. Umumnya, karya yang lebih kecil seperti ilustrasi bust membutuhkan waktu lebih singkat daripada ilustrasi full-body.</p>
+      </div>
+    </div>
+
+    <h2>Pertanyaan Proses Komisi</h2>
+
+    <div class="faq-item">
+      <h3>Apakah Anda menawarkan revisi?</h3>
+      <div class="answer">
+        <p>Ya, saya menawarkan sejumlah revisi terbatas selama fase sketsa dan pewarnaan untuk memastikan Anda puas dengan hasilnya. Perubahan ekstensif di luar ruang lingkup yang disepakati dapat dikenakan biaya tambahan.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Format file apa yang Anda sediakan?</h3>
+      <div class="answer">
+        <p>Saya biasanya menyediakan file JPG atau PNG resolusi tinggi. Jika Anda memerlukan format lain, harap informasikan kepada saya di awal proses komisi.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Bisakah saya menggunakan karya seni yang dikomisi untuk tujuan komersial?</h3>
+      <div class="answer">
+        <p>Secara default, komisi hanya untuk penggunaan pribadi. Jika Anda bermaksud menggunakan karya seni untuk tujuan komersial (misalnya, merchandise, iklan), harap informasikan kepada saya saat Anda melakukan pemesanan, karena ini memerlukan lisensi komersial terpisah dan akan memengaruhi harga.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Bagaimana kebijakan pengembalian dana Anda?</h3>
+      <div class="answer">
+        <p>Pengembalian dana umumnya tidak ditawarkan setelah pekerjaan dimulai karena sifat khusus layanan ini. Namun, pengecualian dapat didiskusikan berdasarkan kasus per kasus dalam keadaan tertentu. Silakan merujuk ke <a href="tos.html">Ketentuan Layanan</a> saya untuk detail lebih lanjut.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem;">Masih ada pertanyaan? Jangan ragu untuk <a href="contact.html">menghubungi saya</a>!</p>
+  </div>
+
+  <footer>
+    <p>© 2025 MUUZX ART. <a href="tos.html">ToS</a> | <a href="contact.html">Contact</a> | <a href="faq.html">FAQ</a> | <a href="Muuzx web.html">Home</a></p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item h3');
+
+      faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const parent = this.parentNode;
+          parent.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
